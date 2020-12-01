@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Arizonia&family=Charm:wght@400;700&family=Dosis:wght@200;400&family=Italianno&family=Itim&family=Merienda:wght@400;700&family=Montserrat:wght@300;400&family=Niconne&family=Nunito:wght@200;300&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@200;400&family=Roboto:wght@100;400&family=Tangerine:wght@400;700&family=Texturina:wght@200;500&display=swap');
+
+/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    cursor: default;
+    font: normal 16px 'Quicksand',sans-serif;
+    /* color: rgb(82, 0, 0); */
+    color: #0a043c;
+}
+
+ul, nav{
+    list-style: none;
+}
+
+a, button{
+    color: white;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+a.btn, button.btn{
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #b53f3f;
+    opacity: 1;
+}
+
+a:hover,a:focus, button:hover, button:focus{
+    opacity: 1;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+section:not(.hero):nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.grid {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h2.title {
+    text-transform: uppercase;
+    font: bold 45px 'Nunito', sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+p.caption {
+    font-weight: 600;
+    font-size: 18px;
+    max-width: 1020px;
+    line-height: 2;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+hr{
+    border-radius: 10px;
+    width: 250px;
+    height: 2px;
+    background-color: #0a043c;
+    margin-bottom: 50px;
+    border: 0;
+}
+
+
+/* ANIMATION SECTION STYLES */
+.courses,
+.packages,
+.contact,
+.project,
+.footer {
+    animation: 2s courses 1s forwards;
+    opacity: 0;
+    margin-top: -100px;
+}
+
+@keyframes courses {
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+/* Header Section Style */
+header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px 0;
+    animation: 2s header 0.8s forwards;
+    opacity: 0;
+    z-index: 1;
+}
+
+@keyframes header {
+    100%{
+        opacity: 1;
+    }
+}
+
+header h2 a {
+    font-family: 'Nunito',sans-serif;
+    opacity: 1;
+    font-weight: 200;
+    cursor: default;
+}
+
+header nav{
+    display: flex;
+    margin-right: -15px;
+}
+
+header nav li{
+    margin: 0 15px;
+}
+
+/* Hero Section Style */
+.hero{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.hero .background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size:cover;
+    z-index: -1;
+    background-color: #db8080;
+}
+
+.hero .background-text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: 5s background-text 1s forwards;
+    opacity: 0;
+}
+
+@keyframes background-text{
+    25%{
+        opacity: 0.8;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.hero .background-text h1{
+    color: black;
+    font-size: 350px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.hero .background-text h2 {
+    font-family: 'Merienda',sans-serif;
+    color: black;
+    font-size: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.hero h1{
+    font: bold 100px 'Tangerine',sans-serif;
+    margin-bottom: 15px;
+}
+
+.hero h3{
+    font: normal 28px 'Raleway',sans-serif;
+    margin-bottom: 40px;
+}
+
+.hero a.btn{
+    padding: 20px 46px;
+}
+
+/* Hero Section Animation Style */
+.hero-container {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 5s hero-container 5s forwards;
+}
+
+@keyframes hero-container {
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+/* Courses Section Style */
+.courses .grid li{
+    height: 350px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.courses .grid li.sm-image {
+    flex-basis: 30%;
+}
+
+.courses .grid li.lg-image {
+    flex-basis: 70%;
+}
+
+/* Packages Section Style */
+.packages .grid li{
+    padding:50px;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.packages .grid li i{
+    color: #8c9eff;
+}
+
+.packages .grid li h2{
+    margin: 20px 0;
+    font-size: 35px;
+}
+
+/* Testimonial Section Style */
+.testimonial .quote{
+    max-width: 860px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 20px 0 20px 0;
+}
+
+/* Contact Section Style */
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.contact form input{
+    padding: 15px;
+    margin-right: 30px;
+    font-size: 18px;
+    color: #555;
+    flex: 1;
+}
+
+.contact form .btn{
+    font-family: 'Quicksand',sans-serif;
+    border: none;
+    cursor: pointer;
+    padding:16px 40px;
+}
+
+/* Projects Section Style */
+
+.project .grid a{
+    height: 350px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: top center;
+ }
+ 
+.project .grid a.sm-image {
+     flex-basis: 30%;
+ }
+
+.project .grid a.lg-image {
+     flex-basis: 70%;
+}
+
+/* Footer Section Style */
+footer{
+    background-color: #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+footer ul{
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 16px;
+}
+
+footer p a ,ul li a {
+    color: #000;
+}
+
+footer p.caption {
+    margin-bottom:0;
+    justify-self: center;
+    text-transform: uppercase;
+    opacity:0.8;
+    align-self: center;
+}
